@@ -1,6 +1,5 @@
-
-Summary:	Object-oriented, cross-platform C++ library which provides handling logic for the Jabber protocol
-Summary(pl):	Obiektowa, miêdzyplatformowa biblioteka C++, która u³atwia manipulacjê protoko³em Jabber
+Summary:	Object-oriented, cross-platform C++ library handling logic for the Jabber protocol
+Summary(pl):	Obiektowa, miêdzyplatformowa biblioteka C++ obs³uguj±ca logikê protoko³u Jabber
 Name:		jabberoo
 Version:	1.9.0.1
 Release:	0.2
@@ -9,7 +8,10 @@ Group:		Libraries
 # Source0-md5:	beaf024d86fa0e787509866b198da0d2
 Source0:	http://www.jabberstudio.org/files/gabber/%{name}-%{version}.tar.gz
 URL:		http://gabber.jabberstudio.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libsigc++-devel >= 1.2.1
+BuildRequires:	libtool >= 2:1.4d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -61,7 +63,8 @@ Wersja statyczna biblioteki Jabberoo.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
