@@ -11,7 +11,7 @@ Source0:	http://www.jabberstudio.org/files/gabber/%{name}-%{version}.tar.gz
 URL:		http://gabber.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libsigc++-devel >= 1.2.1
+BuildRequires:	libsigc++12-devel >= 1.2.1
 BuildRequires:	libtool >= 2:1.4d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,7 +40,7 @@ Summary:	Static Jabberoo library
 Summary(pl):	Wersja statyczna biblioteki Jabberoo
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
-Requires:	libsigc++-devel >= 1.2.1
+Requires:	libsigc++12-devel >= 1.2.1
 
 %description static
 Static Jabberoo library.
