@@ -8,7 +8,6 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://www.jabberstudio.org/files/gabber/%{name}-%{version}.tar.gz
 # Source0-md5:	453f44a1993f4b2c7f080fc7e0ca7350
-Patch0:		%{name}-inc.patch
 URL:		http://gabber.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -51,7 +50,6 @@ Wersja statyczna biblioteki Jabberoo.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
