@@ -1,5 +1,5 @@
 
-%define snap 20021028
+%define snap 20030522
 
 Summary:	Object-oriented, cross-platform C++ library which provides handling logic for the Jabber protocol
 Summary(pl):	Obiektowa, miêdzyplatformowa biblioteka C++, która u³atwia manipulacjê protoko³em Jabber
@@ -8,7 +8,8 @@ Version:	1.1.3
 Release:	0.%{snap}.0
 License:	LGPL
 Group:		Libraries
-Source0:	cvs://jabberstudio.org:/home/cvs/%{name}-%{version}.%{snap}.tar.bz2
+# Source0-md5:	d0933d4585b221739ae9eb0cb09baab5
+Source0:	http://ep09.kernel.pl/~djrzulf/%{name}-%{version}.%{snap}.tar.bz2
 URL:		http://jabberoo.sourceforge.net/
 BuildRequires:	libsigc++-devel >= 1.2.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
