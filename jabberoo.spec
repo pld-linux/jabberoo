@@ -2,12 +2,13 @@
 Summary:	Object-oriented, cross-platform C++ library handling logic for the Jabber protocol
 Summary(pl):	Obiektowa, miêdzyplatformowa biblioteka C++ obs³uguj±ca logikê protoko³u Jabber
 Name:		jabberoo
-Version:	1.9.3
-Release:	1
+Version:	1.9.4
+Release:	1.1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.jabberstudio.org/files/gabber/%{name}-%{version}.tar.gz
-# Source0-md5:	8844dc061129c6ffcc5b7968575407ef
+# Source0-md5:	453f44a1993f4b2c7f080fc7e0ca7350
+Patch0:		%{name}-inc.patch
 URL:		http://gabber.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,6 +51,7 @@ Wersja statyczna biblioteki Jabberoo.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
