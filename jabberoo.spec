@@ -64,6 +64,17 @@ install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+# libjudo uses expat, which is distributed with jabberoo, so install expat.h...
+install libjudo/src/expat/expat.h $RPM_BUILD_ROOT%{_includedir}/%{name}
+
+# ... and hack fucking judo.hpp, which should include expat.h distributed with
+# jabberoo sources
+mv $RPM_BUILD_ROOT%{_includedir}/%{name}/judo.hpp $RPM_BUILD_ROOT%{_includedir}/%{name}/judo.hpp.1
+cat $RPM_BUILD_ROOT%{_includedir}/%{name}/judo.hpp.1 \
+	| sed 's,^#include <expat.h>,#include "expat.h",' \
+	> $RPM_BUILD_ROOT%{_includedir}/%{name}/judo.hpp
+rm -f $RPM_BUILD_ROOT%{_includedir}/%{name}/judo.hpp.1 
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -79,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
-%{_includedir}/*
+%{_includedir}/%{name}
 %{_pkgconfigdir}/*
 
 %files static
