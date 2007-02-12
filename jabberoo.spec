@@ -1,5 +1,5 @@
 Summary:	Object-oriented, cross-platform C++ library handling logic for the Jabber protocol
-Summary(pl):	Obiektowa, miêdzyplatformowa biblioteka C++ obs³uguj±ca logikê protoko³u Jabber
+Summary(pl.UTF-8):   Obiektowa, miÄ™dzyplatformowa biblioteka C++ obsÅ‚ugujÄ…ca logikÄ™ protokoÅ‚u Jabber
 Name:		jabberoo
 Version:	1.9.4
 Release:	2
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Object-oriented, cross-platform C++ library which provides handling logic
 for the Jabber protocol.
 
-%description -l pl
-Obiektowa, miêdzyplatformowa biblioteka C++, która u³atwia manipulacjê
-protoko³em Jabber.
+%description -l pl.UTF-8
+Obiektowa, miÄ™dzyplatformowa biblioteka C++, ktÃ³ra uÅ‚atwia manipulacjÄ™
+protokoÅ‚em Jabber.
 
 %package devel
 Summary:	Jabberoo library development files
-Summary(pl):	Pliki programistyczne biblioteki Jabberoo
+Summary(pl.UTF-8):   Pliki programistyczne biblioteki Jabberoo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++12-devel >= 1.2.1
@@ -32,19 +32,19 @@ Requires:	libsigc++12-devel >= 1.2.1
 %description devel
 Jabberoo library development files.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Pliki programistyczne biblioteki Jabberoo.
 
 %package static
 Summary:	Static Jabberoo library
-Summary(pl):	Wersja statyczna biblioteki Jabberoo
+Summary(pl.UTF-8):   Wersja statyczna biblioteki Jabberoo
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Jabberoo library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Wersja statyczna biblioteki Jabberoo.
 
 %prep
