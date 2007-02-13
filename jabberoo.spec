@@ -1,5 +1,5 @@
 Summary:	Object-oriented, cross-platform C++ library handling logic for the Jabber protocol
-Summary(pl.UTF-8):   Obiektowa, międzyplatformowa biblioteka C++ obsługująca logikę protokołu Jabber
+Summary(pl.UTF-8):	Obiektowa, międzyplatformowa biblioteka C++ obsługująca logikę protokołu Jabber
 Name:		jabberoo
 Version:	1.9.4
 Release:	2
@@ -24,7 +24,7 @@ protokołem Jabber.
 
 %package devel
 Summary:	Jabberoo library development files
-Summary(pl.UTF-8):   Pliki programistyczne biblioteki Jabberoo
+Summary(pl.UTF-8):	Pliki programistyczne biblioteki Jabberoo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++12-devel >= 1.2.1
@@ -37,7 +37,7 @@ Pliki programistyczne biblioteki Jabberoo.
 
 %package static
 Summary:	Static Jabberoo library
-Summary(pl.UTF-8):   Wersja statyczna biblioteki Jabberoo
+Summary(pl.UTF-8):	Wersja statyczna biblioteki Jabberoo
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
